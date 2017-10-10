@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+ body, html{ height: 100%; }
+body{ color: #333; font-size: 14px; margin:0; background: #f1f1f1; }
+a{ color: #5692c4;}
+a:hover, a:focus, a:active{ color: #3077b2; text-decoration: none;}
+.app-toolbar{ background: #fff; color: #3077b2; left:0; font-size: 16px; position: fixed; right:0; top:0; z-index:10; height: 50px; width: 100%; padding-right: 32px;}
+.app-toolbar-row{ width: 100%; white-space: nowrap; text-align: center; }
+.material-btn{ background: none; border: 0; color: #3077b2; cursor: pointer; padding: 10px 16px; outline: none !important; float: left;}
+.app-toolbar h1{ display: inline-block;}
+.app-toolbar h2{ margin-left: 16px; display: inline-block;}
+.app-toolbar small{ margin-top: 10px; display: inline-block; font-size: 18px;}
+.date-container{ float: right; padding-top: 15px; white-space: nowrap; vertical-align: top;}
+.date-container a, .date-container div{ float: left;}
+.topBarBtns{ margin: 0 40px 0 0;}
+.topBarBtns button{ float: left; margin:0; border: 0; background: #fff; color: #75a4cc; border: 1px solid #75a4cc; cursor: pointer; font-size: 14px; padding: 2px 10px;}
+.topBarBtns button:first-child{ background: #3077b2; color: #fff; border: 1px solid #3077b2; border-right:0; border-radius:5px 0 0 5px;}
+.topBarBtns button:last-child{ border-left:0; border-radius:0 5px 5px 0;}
+
+
+
+.sidenav-container{ max-width: calc(100% - 320px); overflow: hidden; position: relative; min-height: 100%; transform: translate3d(0px, 0px, 0px); transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;}
+.app-toolbar + .collapse, .app-toolbar + .collapsing{ height:auto !important; display: block;}
+.sidenav{ position: fixed; min-width: 346px; top: 50px; left:0; bottom:0; height: calc(100vh - 64px); background: #fff; overflow-y: auto; transform: translate3d(0px, 0px, 0px); transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 0s !important;}
+.app-toolbar + [aria-expanded="false"] { transform: translate3d(-100%, 0px, 0px);}
+.group:before, .group:after { content: ""; display: table; } 
+.group:after { clear: both; }
+.user-side-profile{ background: #472a93; color: #fff; padding-top: 8vh; position: relative; margin-bottom: 20px;}
+.user-name{ padding: 8px 32px;}
+.user-id{ display: block;}
+.user-arrow{ position: absolute; right:10px; bottom: 0; padding: 10px;}
+.side-cart-info{ background: #5692c4; padding: 10px 20px; color: #fff; font-size: 1.2rem; text-align: center;}
+.side-cart-info i{ font-size: 2rem; float: left;}
+.side-cart-info p{ margin:0;}
+.main-menu ul, .main-menu ul li, .navList, .navList li{ margin:0; padding:0; list-style: none;}
+.main-menu ul li a{ padding: 8px 32px; display: block; text-decoration: none;}
+.main-menu ul li a *{ vertical-align:middle; color: #472a93 !important;}
+.main-menu ul li.selected a *{ font-weight: bold;}
+.main-menu ul li a span{ display: inline-block; margin-left: 20px;}
+
+.sidenav-content{ overflow: auto; overflow-x: hidden; margin-left: 346px; position: relative; transform: translate3d(0px, 0px, 0px);  transition-duration: 0.4s; transition-property: transform, margin-left, margin-right; transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);}
+.app-toolbar + [aria-expanded="false"] ~ .sidenav-content{ margin-left:0;}
+.app-toolbar + [aria-expanded="false"] ~ footer{ left:0;}
+.main-container{ min-height: 100vh; padding: 50px 0 0;}
+.main-content{}
+
+.secondary-content{ bottom:0; overflow-x: hidden; overflow-y: auto; position: fixed; right: 24px; top: 88px; width: 296px;}
+.secondary-content .card{ background: #b0bec5; border:0; outline: none; border-radius:0; margin-bottom:24px;}
+.card-header{ background: #edeff1; border:0; border-radius:0 !important; padding:0;}
+.card-header a{ display: block; text-decoration:none; padding:16px; font-size: 18px; color: #333 !important;}
+.card-header .key-down{ float: right;}
+[aria-expanded="true"] .key-up{ float: right; display: block;}
+[aria-expanded="false"] .key-up{ float: right; display: none;}
+[aria-expanded="true"] .key-down{ float: right; display: none;}
+[aria-expanded="false"] .key-down{ float: right; display: block;}
+
+.btnTopBar{ background: #fff;}
+.btn-box .btn{ width: 100%; cursor: pointer; background: #5692c4;}
+.btn-box .btn.focus, .btn-box .btn:hover, .btn-box .btn:focus{ background: #3577af;}
+.btn-box .col{ max-width: 180px; padding:5px;}
+.btn-box{ margin:0;}
+.search-box { padding:5px; position: relative; margin:0;}
+.search-box input{ padding-right:35px; background: #dedede;}
+.search-box input:focus{ background: #ebe9e9;}
+.search-box i{ position: absolute; right:14px; font-size: 16px; top: 11px;  }
+
+.sFootItems{ background: #f2f2f2; color: #7db5e4; height: 50px; padding: 0 20px; text-align: left;}
+.sFootItems a{ color: #7db5e4 !important; text-decoration: none !important;}
+.sFootItems i { line-height: 50px;}
+.sFootItems a:nth-child(1) { float: right;}
+.selected-item-list{ padding: 0 15px; width:100%;}
+.selected-item-list li{ border-bottom: 1px solid #e7e7e7; line-height: 50px;}
+.selected-item-list li .col-2{ position: relative;}
+.selected-item-list li .col-7{ padding: 5px 5px 5px 10px; font-size: 16px;}
+.selected-item-list li .col-7 div{ overflow: hidden; white-space: nowrap; text-overflow: ellipsis; width: 162px;}
+.selected-item-list li .col-3{ padding: 5px; font-weight: 700; font-size: 14px; text-align: right;}
+.selected-item-list img{ max-width: 100%; max-height: 50px;}
+.selected-item-list .sItemQty{ position: absolute; top:5px; right: 5px; width: 20px; height: 20px; background: #3077b2; color: #fff;line-height: 20px; text-align: center; font-size: 12px; border-radius: 20px;}
+
+.item-list > .col { max-width: 140px; min-width: 120px; padding: 5px;}
+.item-list > .col > div{ width: 100%; height: 150px; background: #fff; border-radius: 8px; text-align: center; padding: 5px; }
+.item-list .img-row{ height: 80px; margin-bottom: 5px;}
+
+/* .item-list figure{ height: 80px; display: -webkit-box; display: -webkit-flex; display: -moz-box; display: flex; -webkit-flex-align: center; -webkit-align-items: center; align-items: center;} */
+.item-list img{ max-height: 80px; max-width:100%;}
+.item-list small{ color: #e43131; font-size: 12px;}
+.item-list p{ margin-bottom:5px;}
+.item-list b{ font-size: 14px; font-weight: 700; display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis}
+
+footer{ background: #5692c4; color: #fff; left:346px; position: fixed; right:0; bottom:0; z-index:10; height: 50px; padding:0; transform: translate3d(0px, 0px, 0px);  transition-duration: 0.4s; transition-property: transform, left; transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);}
+.foottext-left{ white-space: nowrap;}
+.foottext-right{ align-items: center; display: flex; height: 100%; justify-content: flex-end; min-width: 150px; width: 100%; }
+.footFixedLeft{ float:left; width:296px;}
+.footFixedRight{ }
+.footFixedRight a{ text-align: center; color: #fff; line-height: 50px; border-right: 2px solid #407db0;}
+.footFixedRight a i{line-height: 50px; font-size: 2rem;}
+.prod-not{ text-align: center;width: 100%;padding: 20px; }

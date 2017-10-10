@@ -1,0 +1,88 @@
+  <header class="app-toolbar group">
+      <div class="app-toolbar-row">
+        <div class="date-container">
+          <div class="topBarBtns">
+            <button>Dining</button>
+            <button>TakeAway</button>
+          </div>
+          <a href="#">Custom Sale</a>
+          
+        </div>
+        <button class="hamburger material-btn" data-toggle="collapse" data-target="#sideMenu"><i class="material-icons">reorder</i></button>
+        <small>All Products</small>
+        
+      </div>
+    </header>
+    <!-- END: Header -->                              
+
+    <!-- BEGIN: Sidebar -->
+    <div class="sidenav collapse show" aria-expanded="true" id="sideMenu">
+      <div class="side-cart-info">
+        <i class="material-icons">add_shopping_cart</i>
+        <p>Charge AMT $85.75</p>
+      </div>
+      <div class="sFootItems group">
+        <a href="#"><i class="material-icons">add_shopping_cart</i></a>
+        <a href="#"><i class="material-icons">delete</i></a>
+      </div>
+      <ul class="selected-item-list navList">
+        <li *ngFor="let order of orders">
+          <div class="row no-gutters">
+            <div class="col-2"><span class="sItemQty">{{order.qty}}</span><img src="http://www.gurubhai.com/karusv2/images/{{order.imagename}}"></div>
+            <div class="col-7"><div>{{order.productname}}</div></div>
+            <div class="col-3">${{order.sellprice}}</div>
+          </div>
+        </li>
+        <li>
+            <div class="prod-not">
+              <p *ngIf="orders && orders.length < 1">No Products Available</p>
+            </div>
+        </li>
+      </ul>
+    </div>
+    <!-- END: Sidebar -->                               
+
+    <!-- BEGIN: Content -->
+    <main class="sidenav-content">
+    <section class="main-container">
+    <div class="main-content">
+      <div class="btnTopBar">
+        <div class="row btn-box">
+          <div class="col" *ngFor="let subcat of subCategory" (click)="showProducts(subcat.products)"><button class="btn btn-info">{{subcat.productsubgroupname}}</button></div>
+        </div>
+        <div class="form-group search-box">
+          <i class="material-icons">search</i>
+          <input type="search" class="form-control form-control-sm" [(ngModal)]="search">
+        </div>
+      </div>
+      <div class="row no-gutters item-list">
+        <div class="col" *ngFor="let product of products" (click)="addOrder(product)">
+          <div>
+            <div class="row align-items-center img-row">              
+              <div class="col">
+                <img src="http://www.gurubhai.com/karusv2/images/{{product.imagename}}">
+              </div>              
+            </div>
+            <p><small>${{product.sellprice}}</small></p>
+            <p><b>{{product.productname}}</b></p>
+          </div>
+        </div>
+        <div class="prod-not">
+          <h5 *ngIf="products && products.length < 1">No Products Available</h5>
+        </div>
+      </div>
+    <i class="material-icons">highlight_off</i>
+
+    </div>
+    </section>
+    </main>
+    <!-- END: Content -->                     
+    <footer>
+      <div class="footFixedRight">
+        <div class="row">
+          <a href="#" class="col"><i class="material-icons">add_shopping_cart</i></a>
+          <a href="#" class="col"><i class="material-icons">favorite_border</i></a>
+          <a href="#" class="col"><i class="material-icons">apps</i></a>
+        </div>
+      </div>
+    </footer>
